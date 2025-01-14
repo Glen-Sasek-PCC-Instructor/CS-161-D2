@@ -1,25 +1,75 @@
 Program Name:
+Driving Cost
 
 Program Description:
+Driving is expensive! With your programming partner, 
+write a program to 
+    prompt a user for two doubles: 
+        a car's mpg (miles per gallon)  
+        the gas price per gallon as input, 
+    
+    output the gas cost for:
+        20 miles, 
+        75 miles, and 
+        500 miles.
+
+Output each floating-point value with two digits after the decimal point, which can be achieved by executing
+
+https://en.cppreference.com/w/cpp/io/manip/fixed
+cout << fixed << setprecision(2); 
 
 
 Design:
 A. INPUT
-Define the input variables including name data type. 
+prompt a user for two doubles: 
+    double miles_per_gallon = 0.0;
+    double usd_per_gallon = 0.0;
 
 B. OUTPUT
-Define the output variables including data types. 
+    double usd_per_20_miles = 0.0; 
+    double usd_per_75_miles = 0.0; 
+    double usd_per_500_miles = 0.0; 
 
 C. CALCULATIONS
 Describe calculations used by algorithms in step D.  
-List all formulas. 
-If there are no calculations needed, state there are no calculations.
+    20 miles, 
+    75 miles, and 
+    500 miles.
+
+usd_per_20_miles = 20.0 / miles_per_gallon * usd_per_gallon;
+usd_per_75_miles = 75.0 / miles_per_gallon * usd_per_gallon;
+usd_per_500_miles = 500.0 / miles_per_gallon * usd_per_gallon;
 
 D. LOGIC and ALGORITHMS
 Design the logic of your program using pseudocode or flowcharts. 
 Use conditionals, loops, functions or array constructs.
 List the steps in transforming inputs into outputs. 
 
+PROMPT "MILES PER GALLON: "
+INPUT   miles_per_gallon
+
+PROMPT "USD PER GALLON: "
+INPUT   usd_per_gallon
+
+DO CALCULATIONS
+
+LABEL "MILES       COST"
+
+LABEL "   20"
+DATA  usd_per_20_miles
+
+LABEL "   75"
+DATA  usd_per_75_miles
+
+LABEL "  500"
+DATA  usd_per_500_miles
 
 SAMPLE RUNS
-Copy from assignment document.
+MILES PER GALLON: 10.0
+USD PER GALLON: 5.0
+
+MILES       COST
+   20     $10.00
+   75     $37.50
+  500    $250.00
+
